@@ -187,7 +187,7 @@ function pause(){
 }
 
 
-const time = 75;
+var time = 75;
 var counter = 0;
 
 var timeleft = time;
