@@ -205,7 +205,6 @@ setInterval(function(){
         doPause = false;
     }else if(timeleft <= 0){
         document.getElementById("countdown").innerHTML= "Failed";
-        timeleft = time;
         failed = true;
         if(points > max_points){max_points = points;}
         points = 0;
