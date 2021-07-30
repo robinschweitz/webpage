@@ -176,12 +176,6 @@ function drawSplash(img, sX, sY, sW, sH, dX, dY, dW, dH){
     ctx.drawImage(img, sX, sY, sW, sH, dX, dY, dW, dH);
 }
 
-// function animate(){
-//     ctx.clearRect(0,0,canvas.width,canvas.height);
-//     drawSplash(splashArt, 0, 0, 1215, 717, 0, 0, 1215, 717);
-//     requestAnimationFrame(animate)
-// }
-
 function newSplash(){
     random_index = Math.floor(Math.random()* champ_array.length);
     champ = champ_array[random_index];
@@ -193,7 +187,6 @@ function pause(){
 }
 
 
-// animate();
 const time = 50;
 var counter = 0;
 var difficulty = 0;
@@ -201,9 +194,6 @@ var difficulty = 0;
 var timeleft = time;
 
 setInterval(function(){
-    // setInterval(function(){
-    //     ctx.clearRect(0,0,canvas.width,canvas.height);
-    //     drawSplash(splashArt, 0, 0, 1215, 717, 0, 0, 1215, 717);})
 
     ctx.clearRect(0,0,canvas.width,canvas.height);
     drawSplash(splashArt, 0, 0, 1215, 717, 0, 0, 1215, 717);
