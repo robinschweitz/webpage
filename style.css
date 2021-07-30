@@ -29,7 +29,7 @@ body{
     color: white;
     font-size: 24px;
     text-align: center;
-/*     text-transform: capitalize; */
+    /* text-transform: capitalize; */
 }
 
 #countdown{
@@ -92,37 +92,3 @@ body{
     transform: translate(-78%);
     padding: 15px;
 }
-
-/* svg {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    left: 0%;
-    top: 0%;
-    display: block;
-    background: transparent;
-  }
-
-  .path {
-    stroke: red;
-    stroke-dasharray: 290;
-    stroke-dashoffset: 290;
-    stroke-width: 2px;
-    stroke-linecap: round;
-    stroke-linejoin: round;
-  } */
-
-/* 
-@keyframes minigame {
-    0%{clip-path: circle(5% at 90%  90%);}
-
-    20%{clip-path: circle(5% at 10%  90%);}
-
-    40%{clip-path: circle(10% at 10%  10%);}
-
-    60%{clip-path: circle(15% at 90%  10%);}
-
-    80%{clip-path: circle(20% at 90%  90%);}
-
-    100%{clip-path: circle(40% at 50%  50%);}
-}  */
