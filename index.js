@@ -236,9 +236,9 @@ setInterval(function(){
     // else if(counter == 15){
     //     difficulty += 0.5;
     // }
-    // else if(counter >= 20){
-    //     difficulty += 0.25;
-    // }
+    else if(counter >= 25){   //makes it impossible to go over 30
+         difficulty += 0.25;
+    }
 
 }, 200);
 
