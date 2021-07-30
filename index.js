@@ -200,7 +200,11 @@ setInterval(function(){
     drawSplash(splashArt, 0, 0, 1215, 717, 0, 0, 1215, 717);
 
     document.getElementById("points").innerHTML = points + "  Points in a row";
-    document.getElementById("max-points").innerHTML = max_points + "  Max Points";
+    if (typeof(Storage) !== "undefined") {
+        document.getElementById("max-points").innerHTML = localStorage.getItem("highscore") + "  Max Points";
+    }else{
+        document.getElementById("max-points").innerHTML = max_points + "  Max Points";
+    }
 
     if(doPause == true){
         alert("Pause ! Click to Continue");
@@ -208,16 +212,22 @@ setInterval(function(){
     }else if(timeleft <= 0){
         document.getElementById("countdown").innerHTML= "Failed";
         failed = true;
-        if(points > max_points){max_points = points;}
         if(points > max_points){
             max_points = points;
+            if (typeof(Storage) !== "undefined") {
+            localStorage.setItem("highscore", max_points);
+            }
         }
         points = 0;
         counter = 0;
         time = 75;
         timeleft = time;
         document.getElementById("points").innerHTML =  points + "  Points in a row";
-        document.getElementById("max-points").innerHTML = max_points + "  Max Points";
+        if (typeof(Storage) !== "undefined") {
+            document.getElementById("max-points").innerHTML = localStorage.getItem("highscore") + "  Max Points";
+        }else{
+            document.getElementById("max-points").innerHTML = max_points + "  Max Points";
+        }
         newSplash();
     }else if(correct == false){
         document.getElementById("countdown").innerHTML = timeleft/5 + " secs remaining";
