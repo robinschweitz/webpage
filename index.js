@@ -187,9 +187,8 @@ function pause(){
 }
 
 
-const time = 50;
+const time = 75;
 var counter = 0;
-var difficulty = 0;
 
 var timeleft = time;
 
@@ -211,13 +210,14 @@ setInterval(function(){
         if(points > max_points){max_points = points;}
         points = 0;
         counter = 0;
-        difficulty = 0;
+        time = 75;
+        timeleft = time;
         document.getElementById("points").innerHTML =  points + "  Points in a row";
         document.getElementById("max-points").innerHTML = max_points + "  Max Points";
         newSplash();
     }else if(correct == false){
         document.getElementById("countdown").innerHTML = timeleft/5 + " secs remaining";
-        timeleft -= 1+(difficulty/2);
+        timeleft -= 1;
     }else{
         timeleft = time;
         correct = false;
@@ -226,18 +226,18 @@ setInterval(function(){
         counter += 1;
         document.getElementById("points").innerHTML =  points + "  Points in a row";
     }
-
+  
     if(counter == 10){
-        difficulty += 0.25;
+        time = 50; 
     }
     else if(counter == 20){
-        difficulty += 0.25;
+        time = 35;
     }
-    // else if(counter == 15){
-    //     difficulty += 0.5;
-    // }
-    else if(counter >= 25){   //makes it impossible to go over 30
-         difficulty += 0.25;
+    else if(counter == 40){
+        time = 25;
+    }
+    else if(counter == 60){
+        time = 20;
     }
 
 }, 200);
